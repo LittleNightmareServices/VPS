@@ -36,7 +36,7 @@ class Plan(db.Model):
     disk_gb = db.Column(db.Integer, nullable=False)
     time_limit_hours = db.Column(db.Integer, nullable=True) # Null for no limit
     details = db.Column(db.Text, nullable=True) # For longer descriptions or feature lists
-    
+
     servers = db.relationship('Server', backref='plan_details', lazy='dynamic') # This links Servers to a Plan
 
     def __repr__(self):

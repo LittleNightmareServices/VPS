@@ -17,7 +17,7 @@ def populate_plans_command():
     """Populates the database with predefined subscription plans."""
     plans_data = [
         {
-            "name": "Free Plan", "price_monthly": 0, "price_yearly": 0, 
+            "name": "Free Plan", "price_monthly": 0, "price_yearly": 0,
             "ram_gb": 6, "disk_gb": 100, "time_limit_hours": 3,
             "details": "Basic features, 3-hour session limit, community support."
         },
@@ -57,14 +57,14 @@ def populate_plans_command():
                 added_count += 1
             else:
                 existing_count += 1
-        
+
         if added_count > 0:
             db.session.commit()
             click.echo(f"Added {added_count} new plan(s).")
-        
+
         if existing_count > 0:
             click.echo(f"{existing_count} plan(s) already existed.")
-        
+
         if added_count == 0 and existing_count == len(plans_data):
              click.echo("All plans already exist in the database.")
         elif added_count == 0 and existing_count == 0 and len(plans_data) > 0 : # Should not happen if plans_data is not empty
