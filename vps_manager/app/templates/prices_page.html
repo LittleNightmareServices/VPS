@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Our Subscription Plans</h1>
+    <p>Choose the plan that's right for you. All plans come with our commitment to quality and support.</p>
+
+    <div class="plans-container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        
+        <!-- Placeholder for Plan 1: Free -->
+        <div class="plan" style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 250px; box-shadow: 2px 2px 5px #eee;">
+            <h2>Free Plan</h2>
+            <p class="price">€0 / month</p>
+            <ul>
+                <li>6 GB RAM</li>
+                <li>100 GB Disk Space</li>
+                <li>3 Hours Limit</li>
+                <li>Basic features</li>
+                <li>Community support</li>
+            </ul>
+            <a href="{{ url_for('main.signup') }}?plan=Free" class="btn-select-plan">Get Started</a>
+        </div>
+
+        <!-- Placeholder for Plan 2: Beginner -->
+        <div class="plan" style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 250px; box-shadow: 2px 2px 5px #eee;">
+            <h2>Beginner Plan</h2>
+            <p class="price">€30 / month (or €340 / year)</p>
+            <ul>
+                <li>12 GB RAM</li>
+                <li>150 GB Disk Space</li>
+                <li>4 Hours Limit</li>
+                <li>More resources</li>
+                <li>Email support</li>
+            </ul>
+            <a href="{{ url_for('main.signup') }}?plan=Beginner" class="btn-select-plan">Choose Plan</a>
+        </div>
+
+        <!-- Placeholder for Plan 3: Pro -->
+        <div class="plan" style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 250px; box-shadow: 2px 2px 5px #eee;">
+            <h2>Pro Plan</h2>
+            <p class="price">€70 / month (or €840 / year)</p>
+            <ul>
+                <li>16 GB RAM</li>
+                <li>400 GB Disk Space</li>
+                <li>12 Hours Limit</li>
+                <li>Advanced features</li>
+                <li>Priority support</li>
+            </ul>
+            <a href="{{ url_for('main.signup') }}?plan=Pro" class="btn-select-plan">Choose Plan</a>
+        </div>
+
+        <!-- Placeholder for Plan 4: Ultimate+ -->
+        <div class="plan" style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 250px; box-shadow: 2px 2px 5px #eee; background-color: #f0f8ff;">
+            <h2>Ultimate+ Plan</h2>
+            <p class="price">€90 / month (or €1000 / year)</p>
+            <ul>
+                <li>32 GB RAM</li>
+                <li>1TB Disk Space</li>
+                <li>No Hours Limit</li>
+                <li>All features included</li>
+                <li>Dedicated support</li>
+            </ul>
+            <a href="{{ url_for('main.signup') }}?plan=Ultimate%2B" class="btn-select-plan">Choose Plan</a>
+        </div>
+
+    </div>
+
+    <style>
+        .plans-container {
+            margin-top: 20px;
+        }
+        .plan {
+            text-align: center;
+        }
+        .plan h2 {
+            color: #337ab7; /* A blue tone for plan names */
+        }
+        .plan .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .plan ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .plan ul li {
+            margin-bottom: 8px;
+        }
+        .btn-select-plan {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5cb85c; /* Green */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-select-plan:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+{% endblock %}

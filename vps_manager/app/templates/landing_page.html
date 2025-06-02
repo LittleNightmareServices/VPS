@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Your Awesome VPS Manager!</h1>
+    <p>Discover seamless virtual private server management with our intuitive platform. Whether you're a developer, a small business, or a large enterprise, we have the perfect plan for you.</p>
+    
+    <section id="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Easy Server Deployment</li>
+            <li>Scalable Resources</li>
+            <li>Affordable Pricing Plans</li>
+            <li>24/7 Monitoring and Support (on select plans)</li>
+            <li>User-Friendly Dashboard</li>
+        </ul>
+    </section>
+
+    <section id="call-to-action">
+        <h2>Ready to Get Started?</h2>
+        <p>
+            Check out our <a href="{{ url_for('main.pricing') }}">pricing plans</a> or 
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('main.signup') }}">sign up today</a>!
+            {% else %}
+            go to your <a href="{{ url_for('main.dashboard') }}">dashboard</a>.
+            {% endif %}
+        </p>
+    </section>
+{% endblock %}

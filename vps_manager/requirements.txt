@@ -1,0 +1,5 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Login
+# Add other dependencies as we identify them
