@@ -1,0 +1,39 @@
+body {
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+
+#console-output {
+    height: 400px; /* Fixed height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    background-color: #f8f9fa; /* Light background */
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for console look */
+    font-size: 0.9em;
+    line-height: 1.4;
+    white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+}
+
+.console-message {
+    margin-bottom: 5px;
+}
+
+.console-message-system {
+    color: #007bff; /* Blue for system messages */
+    font-style: italic;
+}
+
+.console-message-error {
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+}
+
+.console-message-user-command {
+    color: #28a745; /* Green for user commands (if locally echoed) */
+}
+
+/* Ensure file list items don't have excessive padding if using list-group */
+#file-list-container .list-group-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}

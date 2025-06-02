@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+instance/
+
+# Server data and backups
+/servers/
+/backups/
